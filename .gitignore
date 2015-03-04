@@ -28,3 +28,6 @@ node_modules
 
 #configuration file
 config.js
+
+#hidden mac file
+.DS_Store
