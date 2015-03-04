@@ -1,0 +1,17 @@
+{
+  "name": "musixmatch-ensci2015",
+  "version": "0.0.1",
+  "description": "some scripts for the Ensci 2015 workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lyrics"
+  ],
+  "author": "uf0",
+  "license": "GNU GLP3",
+  "dependencies": {
+    "csv-write-stream": "^0.3.0"
+  }
+}
