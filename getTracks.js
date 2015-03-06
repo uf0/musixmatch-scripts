@@ -5,7 +5,7 @@ var fs = require('fs'),
 
 var musix = new musixMatch.MusixMatch(CONFIG.api);
 
-var words = JSON.parse(fs.readFileSync('data/words2.json', encoding='utf8'))
+var words = JSON.parse(fs.readFileSync('data/words.json', encoding='utf8'))
 
 var writer = csv({separator: '\t'});
 writer.pipe(fs.createWriteStream('data/tracks.csv'))
@@ -59,7 +59,7 @@ var research = function(params){
           }else{
             wordsCount = wordsCount+1
             if(wordsCount <= wordsTot){
-              params = {q_lyrics:words[wordsCount], s_track_rating:'desc', g_common_track:1, page_size:100, page:1}
+              params = {q_lyrics:words[wordsCount], s_track_rating:'desc', g_common_track:1, page_size:100, page:1,f_lyrics_language:"fr"}
               research(params)
             }else{
               writer.end()
@@ -78,6 +78,6 @@ var research = function(params){
   });
 }
 
-var params = {q_lyrics:words[wordsCount], s_track_rating:'desc', g_common_track:1, page_size:100, page:1}
+var params = {q_lyrics:words[wordsCount], s_track_rating:'desc', g_common_track:1, page_size:100, page:1,f_lyrics_language:"fr"}
 
 research(params)

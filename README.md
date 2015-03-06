@@ -38,6 +38,7 @@ add data folder
 ``` sh
 $ mkdir data
 ```
+####Get tracks from list of words
 
 add words file
 
@@ -58,5 +59,29 @@ open ```words.json``` file insert the words to search for as an array
 run the script
 
 ``` sh
-$ node index.js
+$ node getTracks.js
+```
+
+####Get album date from list of album_id
+
+add album_id file
+
+``` sh
+$ touch data/album_id.json
+```
+
+open ```album_id.json``` file insert the ids to search for as an array
+
+```
+[
+  '10266325',
+  '10277068"',
+  '10277146"'
+]
+```
+
+run the script
+
+``` sh
+$ node getAlbumDate.js
 ```
