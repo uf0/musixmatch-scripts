@@ -75,8 +75,8 @@ open ```album_id.json``` file insert the ids to search for as an array
 ```
 [
   '10266325',
-  '10277068"',
-  '10277146"'
+  '10277068',
+  '10277146'
 ]
 ```
 
